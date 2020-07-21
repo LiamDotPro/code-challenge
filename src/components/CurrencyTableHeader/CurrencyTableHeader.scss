@@ -1,0 +1,14 @@
+.bfy-currency-table-header {
+
+}
+
+.bfy-currency-table-controls-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .bfy-currency-table-controls {
+    display: flex;
+    max-height: 30px;
+  }
+}

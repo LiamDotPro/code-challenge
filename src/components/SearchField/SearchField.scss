@@ -1,0 +1,21 @@
+.bfy-search-field {
+  display: flex;
+
+  img {
+    position: absolute;
+    width: 20px;
+    margin-left: 15px;
+    margin-top: 4px;
+
+
+  }
+
+  input {
+    margin-left: 10px;
+    padding: 12px 12px 12px 14px;
+    text-indent: 14px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 300px;
+  }
+}

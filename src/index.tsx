@@ -1,21 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
+import "./index.scss";
+import { App } from "./App";
 import * as serviceWorker from "./serviceWorker";
-import {
-  ApolloClient,
-  HttpLink,
-  InMemoryCache,
-  ApolloProvider,
-} from "@apollo/client";
+import { ApolloClient, ApolloProvider, HttpLink, InMemoryCache } from "@apollo/client";
+import { setupInitialState } from './shared/cache'
+
+export const cache = new InMemoryCache()
 
 const client = new ApolloClient({
-  cache: new InMemoryCache(),
+    cache: cache,
   link: new HttpLink({
     uri: "https://api.blocktap.io/graphql",
   }),
 });
+
+setupInitialState()
 
 ReactDOM.render(
   <React.StrictMode>
